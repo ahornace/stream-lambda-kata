@@ -31,6 +31,13 @@ public class UtilTest {
     }
 
     @Test
+    public void shouldCountStringsWithFiveCharacters() {
+        List<String> input = asList("a", "bb", "ccc", "dddd", "eeee", "ffffff");
+        Long result = Util.countStringsWithFiveCharacters(input);
+        assertThat(result, equalTo(1));
+    }
+
+    @Test
     public void shouldSortStrings() throws Exception {
         List<String> input = Arrays.asList("C", "F", "A", "D", "B", "E");
         List<String> result = Util.sortStrings(input);
@@ -56,6 +63,13 @@ public class UtilTest {
         List<Integer> input = asList(1, 2, 3, 4, 5);
         Integer result = Util.sum(input);
         assertThat(result, equalTo(1 + 2 + 3 + 4 + 5));
+    }
+
+    @Test
+    public void shouldMultiplyIntegersInCollection() {
+        List<Integer> input = asList(1, 2, 3, 4, 5);
+        Integer result = Util.multiply(input);
+        assertThat(result, equalTo(2 * 3 * 4 * 5));
     }
 
     @Test
