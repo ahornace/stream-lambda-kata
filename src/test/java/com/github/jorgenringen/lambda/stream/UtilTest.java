@@ -24,7 +24,7 @@ public class UtilTest {
     }
 
     @Test
-    public void shouldRemoveElementsWithMoreThanThreeCharacters() {
+    public void shouldRemoveElementsWithMoreThanFourCharacters() {
         List<String> input = asList("This", "is", "java", "8");
         List<String> result = Util.removeElementsWithMoreThanFourCharacters(input);
         assertThat(result, contains("is", "8"));
@@ -34,7 +34,7 @@ public class UtilTest {
     public void shouldCountStringsWithFiveCharacters() {
         List<String> input = asList("a", "bb", "ccc", "dddd", "eeeee", "ffffff");
         Long result = Util.countStringsWithFiveCharacters(input);
-        assertThat(result, equalTo(1));
+        assertThat(result, equalTo(1L));
     }
 
     @Test
